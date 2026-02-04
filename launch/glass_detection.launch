@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="glass_detection_navigation" type="sonar_publisher.py" name="sonar_publisher" output="screen" />
+
+    <node pkg="glass_detection_navigation" type="sensor_fusion.py" name="lidar_near_sonar_filter" output="screen" />
+
+    <node pkg="glass_detection_navigation" type="glass_map_generator.py" name="glass_map_generator" output="screen" />
+
+    <node pkg="glass_detection_navigation" type="speed_controller.py" name="adaptive_speed_controller" output="screen" />
+</launch>
